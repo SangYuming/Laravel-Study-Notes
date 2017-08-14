@@ -63,6 +63,13 @@
 
 ## 五、路由
 
+- 作用
+
+  就是将用户的请求转发给相应的程序进行处理，即建立url和程序之间的映射，就像士兵接收命令后，做出动作。
+
+
+- Http
+
 - 路由响应HTTP请求
 
   ```php
@@ -90,8 +97,32 @@
   });
   ```
 
+  ```php
+  <?php
+  Route::get('basic1',function(){
+  return 'Hello World';
+  });
+  ```
+
+
   第二种方式:
 
+- 多请求路由
+
+  ```php
+  //match指定想用类型的路由
+  <?php
+  Route::match(['get','post'],'multy1',function(){
+   return 'multy1';
+  });
+  ```
+
+  ```php
+  <?php
+  Route::any('multy2',function(){
+  return 'multy2';
+  });
+  ```
 
 
 ## 六、Controller
